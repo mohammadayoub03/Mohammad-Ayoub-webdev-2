@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+    font-family: Raleway;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #DFDFDF;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    z-index: 2;
+
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    flex-direction: column;
+    z-index: 1;
+
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    
+}
+
+.navbar-links {
+    height: 100%;
+    
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navbar-links li {
+    list-style: none;
+    
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color:rgba(189, 189, 7, 0.849);
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+    .menu-item-options {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu-item-quantity, .menu-item-price, .menu-item-add-btn {
+        width: 100%;
+    }
+    .menu-item-add-btn button {
+        width: 100%; /* make the button take up the full width of its container */
+    }
+    .menu-item {
+        width: 100%;
+        margin: 0;
+    }
+    .menu-item img {
+        width: 100%;
+    }
+    .menu-items {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+    
+
+}
+.menu-container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    flex-wrap: nowrap;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    max-height:80vh;
+    overflow-y: auto;
+   
+}
+
+.menu-item {
+    width: 300px;
+    height: 360px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    position: relative;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid black;
+    z-index: 0;
+    text-align: center;
+    
+}
+
+.menu-item img {
+    margin: 0;
+    width: 250px; /* adjust as needed */
+    height: 250px; /* maintain aspect ratio */
+
+}
+
+
+.menu-item h2 {
+    margin: 1%;
+    font-size: 1.5rem;
+}
+
+
+.menu-item-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1%;
+}
+
+.menu-item-quantity {
+    font-size: 1rem;
+}
+
+.menu-item-price {
+    color: black;
+    z-index: 2;
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-left: 1rem;
+}
+
+.menu-item-add-btn {
+    display: flex;
+}
+
+.add-btn{
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-btn:hover{
+    background-color: rgba(189, 189, 7, 0.849);
+}
+
+
+
+
+
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    z-index: 0
+
+}
+
+.footer-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+.footer-links a:hover {
+    background-color:rgba(189, 189, 7, 0.849);
+}
+
+.login-signup-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.login-signup-btns a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-left: 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.login-btn:hover, .signup-btn:hover, .logout-btn:hover {
+    background-color:rgba(189, 189, 7, 0.849);
+}
+.cart-icon-container {
+    position: absolute;
+    right: 5rem;
+    top: 4rem;
+    bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+.cart-icon:hover {
+    transform: scale(1.2); /* Increase the size of the icon on hover */
+    transition: transform 0.2s ease-in-out;
+}
